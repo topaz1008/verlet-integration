@@ -1,8 +1,8 @@
 import { VerletPoint, VerletConstraint } from './verlet.js';
 
-const COLS = 35,
-    ROWS = 35,
-    QUAD_SIZE = 15;
+const COLS = 30,
+    ROWS = 30,
+    QUAD_SIZE = 10;
 
 let mouseX = 0,
     mouseY = 0,
@@ -10,11 +10,11 @@ let mouseX = 0,
     viewWidth,
     viewHeight;
 
-const canvas = document.getElementById('main'),
+const canvas = document.getElementById('main-canvas'),
     context = canvas.getContext('2d');
 
-canvas.width = viewWidth = window.innerWidth - 500;
-canvas.height = viewHeight = window.innerHeight - 500;
+canvas.width = viewWidth = 1280;
+canvas.height = viewHeight = 720;
 
 const points = new Array(COLS * ROWS),
     constraints = new Array((COLS - 1) * ROWS + (ROWS - 1) * COLS);

@@ -1,18 +1,46 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" data-theme="dark">
 <head>
     <meta charset="utf-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="stylesheet" href="https://unpkg.com/@picocss/pico@latest/css/pico.min.css">
+    <link rel="stylesheet" href="assets/style.css">
+
     <title>verlet-integration</title>
-    <style>
-        body { margin: 0; background: #555; color: #fff; }
-        #main { background: #000; margin: 30px auto auto; display: block; }
-    </style>
 </head>
 <body>
+<header>
+    <h2>Cloth Effect Using Verlet Integration</h2>
+    <p>verlet-integration</p>
+    <p>TODO: add explanation</p>
+    <details>
+        <summary>Source Code</summary>
+        <p>Can be found on my <a href="https://github.com/topaz1008/verlet-integration/" target="_blank">GitHub</a>.</p>
+    </details>
+</header>
 
-<canvas id="main"></canvas>
+<section>
+
+    <fieldset>
+        <legend>Controls (NOT CURRENTLY WORKING)</legend>
+        <label for="range-stiffness">Constraint Stiffness
+            <input type="range" min="1" max="10" value="1" id="range-stiffness" name="range">
+        </label>
+        <label for="range-gravity">Gravity
+            <input type="range" min="0" max="100" value="50" id="range-gravity" name="range">
+        </label>
+        <label for="range-wind">Wind
+            <input type="range" min="0" max="100" value="50" id="range-wind" name="range">
+        </label>
+    </fieldset>
+
+    <div id="canvas-container">
+        <canvas id="main-canvas"></canvas>
+    </div>
+
+</section>
 
 <script src="main.js" type="module"></script>
 

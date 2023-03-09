@@ -1,0 +1,8 @@
+:root {
+    --max-width: 1280px;
+}
+
+body {
+    max-width: var(--max-width);
+    margin: auto;
+}
